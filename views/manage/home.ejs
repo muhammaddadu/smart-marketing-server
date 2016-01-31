@@ -1,0 +1,10 @@
+<nav class="navbar navbar-default navbar-fixed sub-navbar" role="navigation" ng-controller="sub-navbar">
+    <div class="container">
+        <ul class="nav navbar-nav">
+            <li  data-ng-repeat="(id, item) in menuItems">
+                <a id="{{id}}" href="#{{item.path}}" ng-class="{active: isActive(item.path)}"><i class="{{item.icon}}"></i> <span>{{item.title}}</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="mainview-animation" ng-view></div>

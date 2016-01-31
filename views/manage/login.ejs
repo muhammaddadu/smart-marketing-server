@@ -1,0 +1,28 @@
+<div class="container" ng-controller="login">
+    <div class="card card-container">
+        <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+        <p id="profile-name" class="profile-name-card"></p>
+        <form class="form-signin">
+            <div ng-if="errorMessage" class="alert alert-danger" role="alert">
+                <span class="fa fa-flash" aria-hidden="true"></span>
+                <span class="sr-only">Error:</span>
+                {{errorMessage}}
+            </div>
+            <div ng-if="successMessage" class="alert alert-success" role="alert">
+                <span class="fa fa-flash" aria-hidden="true"></span>
+                <span class="sr-only">Success:</span>
+                {{successMessage}}
+            </div>
+            <span id="reauth-email" class="reauth-email"></span>
+            <input ng-model="user.email" type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+            <input ng-if="!forgotPasswordPage" ng-model="user.password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            <div ng-if="!forgotPasswordPage" id="remember" class="checkbox">
+                <label><input type="checkbox" value="remember-me" ng-model="user.remember"> I'm Awesome, Remember Me!</label>
+            </div>
+            <button ng-if="!forgotPasswordPage" class="btn btn-lg btn-primary btn-block btn-signin" type="submit" ng-click="signin('partner', user)">Let's Go!</button>
+            <button ng-if="forgotPasswordPage" class="btn btn-lg btn-primary btn-block btn-signin" type="submit" ng-click="resetPasswordRequest(user.email)">Reset Password</button>
+        </form><!-- /form -->
+        <a ng-if="forgotPasswordPage" ng-click="closeForgotPasswordPage()" class="forgot-password">Back</a>
+        <a ng-if="!forgotPasswordPage" ng-click="openForgotPasswordPage()" class="forgot-password">Forgot your password?</a>
+    </div><!-- /card-container -->
+</div><!-- /container -->

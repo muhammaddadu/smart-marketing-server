@@ -1,0 +1,122 @@
+/**
+ * Eat Homely
+ */
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: Lora,"Helvetica Neue", Helvetica,Arial, sans-serif;
+}
+
+.text-center { text-align: center; }
+.text-uppercase { text-transform: uppercase; }
+button.btn-lg { font-size: 14px; }
+.m20 { margin: 20px; }
+
+#section-register { background-color: #ae5d5c; padding-top: 50px; background-image: url("/img/becomeAChefBG.jpg"); background-position: center bottom; }
+#logo { font-family: "Great Vibes", cursive; color: #fff; font-size: 30px; font-weight: 200; white-space:nowrap; }
+#logo:hover, #logo:active, #logo:focus { text-decoration: none; color: #fff; }
+
+#section-register #info { padding: 20px 0px 70px 0px; color: white; }
+#section-register #info .text-muted { color: #E2D9D9 }
+#section-register #info h1 { text-transform: uppercase; font-weight: 300; font-size: 51px; margin-bottom: 50px; }
+#section-register #info p {}
+
+#signupform {
+    padding: 25px;
+    background-color: #f6ecec;
+    background-color: rgba(255, 255, 255, 0.9);
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+#signupform #title {
+    text-transform: uppercase;
+    padding: 15px 0px;
+    font-size: 13px;
+    margin: 0px;
+    text-align: center;
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+#section-marketing { margin-top: 50px; }
+/* Center align the text within the three columns below the carousel */
+#section-marketing .col-lg-4 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+#section-marketing h2 {
+    font-weight: normal;
+}
+#section-marketing .col-lg-4 p {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+    margin: 50px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+.featurette-image { height: 380px; width: 380px; }
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+@media (max-width: 768px) {
+    #signupform { margin-top: 20px; }
+    #section-register { padding: 30px 20px; }
+    #section-marketing { margin-top: 40px; }
+    .featurette-divider { margin:  40px 0; }
+    .featurette-image { height: 200px; width: 200px; }
+}
+
+@media (min-width: 768px) {
+    #section-register { height: 580px; }
+    #signupform { height: 570px; }
+    /* Navbar positioning foo */
+    .navbar-wrapper {
+        margin-top: 20px;
+    }
+    .navbar-wrapper .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .navbar-wrapper .navbar {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    /* The navbar becomes detached from the top, so we round the corners */
+    .navbar-wrapper .navbar {
+        border-radius: 4px;
+    }
+
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+        margin-bottom: 20px;
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+    .featurette-heading {
+        font-size: 35px;
+    }
+}
+
+@media (min-width: 992px) {
+    .featurette-heading {
+        margin-top: 120px;
+    }
+}

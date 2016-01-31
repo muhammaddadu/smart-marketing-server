@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%-title%> | Smart Marketing</title>
+    <%typeof meta !== 'undefined' && meta.length > 0 && meta.forEach(function (item){%><meta <%-(item.name ? 'name' : 'property')%>=”<%-item.property || item.name%>” content=”<%-item.content%>”/>
+    <%});%>
+    <link rel='shortcut icon' href="/img/favicon.ico" type="image/x-icon" />
+    <!-- Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Great+Vibes' async='' rel='stylesheet' type='text/css'>
+    <link href="//file.myfontastic.com/EcvcUKVS4uiuywLJT48qA9/icons.css" rel="stylesheet">
+    <!-- Styling -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/animate.css" rel="stylesheet">
+    <%if (typeof css === 'object') {
+    css.forEach(function (location) {%>
+    <link href="<%-location%>" rel="stylesheet" /><%})}%>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script async src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script async src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body data-ng-app="app">
+
+    <%- body %>
+
+    <!-- FOOTER -->
+    <footer class="container">
+        <p>&copy; Smart Marketing. &middot; <a href="#">FAQ</a> &middot; <a href="#">Terms</a></p>
+    </footer>
+
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/wow.min.js"></script>
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/angular-route.js"></script>
+
+    <%if (typeof javascript === 'object') {
+    javascript.forEach(function (location) {%>
+    <script src="<%-location%>"></script><%})}%>
+</body>
+</html>

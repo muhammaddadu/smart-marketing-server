@@ -1,0 +1,43 @@
+/**
+ * Header CSS
+ * http://www.colorhexa.com/ae5d5c
+ */
+body { margin-top: 50px; }
+
+.navbar-eathomely {
+	background-color: #ae5d5c;
+	border: 0px;
+	box-shadow: 0px 0px 4px #a7aeae;
+}
+.navbar-eathomely .navbar-toggle { background-color: #a15150; }
+.navbar-eathomely .navbar-toggle span { background-color: #fff; }
+
+.navbar-eathomely a.navbar-brand {
+	color: white;
+	font-family: "Great Vibes", cursive;
+	font-size: 21px;
+}
+
+.navbar-eathomely li > a { color: white; }
+.navbar-eathomely li > a:hover,
+.navbar-eathomely li > a:active,
+.navbar-eathomely li > a:focus,
+.navbar-eathomely li.active a {
+	background-color: #a15150;
+}
+
+.navbar-eathomely .nav .open > a,
+.navbar-eathomely .nav .open > a:focus,
+.navbar-eathomely .nav .open > a:hover,
+.navbar-eathomely .nav .open > a:active {
+    background-color: #a15150;
+    border-color: #337ab7;
+}
+.navbar-eathomely .dropdown-menu {
+	background-color: #ae5d5c;
+	border: 0px;
+}
+.navbar-eathomely .dropdown-menu a:hover { color: #FFF; }
+
+footer { margin-top: 5px; width: 100%; text-align: center; }
+footer .copyright { color: #a7aeae; padding: 5px; margin: 0px; }

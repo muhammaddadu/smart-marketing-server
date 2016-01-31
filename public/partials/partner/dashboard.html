@@ -1,0 +1,34 @@
+<div class="container">
+    <div ng-if="stats" class="row equalheights">
+        <div class="col-xs-12 col-sm-12 col-md-6" data-ng-repeat="item in stats">
+            <div class="panel panel-stats {{item.class}}">
+                <div class="panel-heading">{{item.title}}</div>
+                <div class="panel-body">
+                    <i class="{{item.icon}}"></i>
+                    <span ng-if="item.type === 'currency'">{{item.value | currency: '&pound' : 2}}</span>
+                    <span ng-if="!item.type">{{item.value}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <section id="productsDashboard" class="panel panel-success">
+                <div class="panel-heading"><i class="fa fa-calendar"></i> Campaigns</div>
+                <div class="panel-body">
+                    <table datatable="" dt-options="campaignShowCase.dtOptions" dt-columns="campaignShowCase.dtColumns" class="row-border hover"></table>
+                </div>
+            </section>
+        </div>
+        <div class="col-md-6">
+            <section id="productsDashboard" class="panel panel-success">
+                <div class="panel-heading"><i class="fa fa-calendar"></i> Views</div>
+                <div class="panel-body">
+                    <table datatable="" dt-options="eventsShowCase.dtOptions" dt-columns="eventsShowCase.dtColumns" class="row-border hover"></table>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<ng-include src="template='/partials/partner/guideModal.html'"></ng-include>
