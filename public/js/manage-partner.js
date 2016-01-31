@@ -191,14 +191,11 @@ app.controller('dashboard', function ($scope, $filter, View, Campaign, $filter, 
 	    };
 	$scope.eventsShowCase = {
 		dtColumns: [
-			DTColumnBuilder.newColumn('name').withTitle('Name'),
-			DTColumnBuilder.newColumn('images').withTitle('Image'),
-			DTColumnBuilder.newColumn('bid').withTitle('Bid').renderWith(function (data) {
-				return $filter('currency')(data, '&pound;', 2);
-			})
+			DTColumnBuilder.newColumn('UUID').withTitle('UUID'),
+			DTColumnBuilder.newColumn('count').withTitle('count')
 	    ],
 	    dtOptions: DTOptionsBuilder
-	    			.fromFnPromise(function () { return Campaign.get(); })
+	    			.fromFnPromise(function () { return View.get(); })
 	    			.withDataProp('data.data')
 	    			.withPaginationType('full_numbers')
 	    			// .withOption('order', [0, 'desc'])
